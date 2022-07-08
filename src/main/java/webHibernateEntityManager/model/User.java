@@ -3,7 +3,7 @@ package webHibernateEntityManager.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 public class User {
 
     @Id
@@ -12,7 +12,7 @@ public class User {
     private Long id;
 
     @Column(name = "name")
-    private String firstName;
+    private String name;
 
     @Column(name = "surname")
     private String surname;
@@ -24,8 +24,8 @@ public class User {
     public User() {
     }
 
-    public User(String firstName, String surname, String email) {
-        this.firstName = firstName;
+    public User(String name, String surname, String email) {
+        this.name = name;
         this.surname = surname;
         this.email = email;
     }
@@ -38,12 +38,12 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getSurname() {
